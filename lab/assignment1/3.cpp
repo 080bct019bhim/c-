@@ -2,9 +2,7 @@
 
 using namespace std;
 
-double primarySchoolTotalMonthlyFee(double, double=3000, double=3000);
-double secondarySchoolTotalMonthlyFee(double, double=3000, double=3000);
-double highSchoolTotalMonthlyFee(double, double=3000, double=0);
+double SchoolTotalMonthlyFee(double, double=3000, double=3000);
 
 int main()
 
@@ -14,24 +12,21 @@ int main()
     double highSchoolTutuionFee=10000;
 
     double primarySchoolTransportationFee=2000;
+    double highSchoolTransportationFee=3000;
+
+    double highSchoolLunchFee=0;
 
 
-    cout<<"Total monthly Fee of Primary school: "<<primarySchoolTotalMonthlyFee(primarySchoolTutuionFee,primarySchoolTransportationFee)<<endl;
-    cout<<"Total monthly Fee of secondary school: "<<secondarySchoolTotalMonthlyFee(secondarySchoolTutuionFee)<<endl;
-    cout<<"Total monthly Fee of high school: "<<highSchoolTotalMonthlyFee(highSchoolTutuionFee)<<endl;
+
+
+    cout<<"Total monthly Fee of Primary school: "<<SchoolTotalMonthlyFee(primarySchoolTutuionFee,primarySchoolTransportationFee)<<endl;
+    cout<<"Total monthly Fee of secondary school: "<<SchoolTotalMonthlyFee(secondarySchoolTutuionFee)<<endl;
+    cout<<"Total monthly Fee of high school: "<<SchoolTotalMonthlyFee(highSchoolTutuionFee,highSchoolTransportationFee,highSchoolLunchFee)<<endl;
 
     return 0; 
 }
 
-double primarySchoolTotalMonthlyFee(double primarySchoolTutuionFee, double primarySchoolTransportationFee, double primarySchoolLunchFee)
+double SchoolTotalMonthlyFee(double SchoolTutuionFee, double SchoolTransportationFee, double SchoolLunchFee)
 {
-    return primarySchoolTutuionFee+primarySchoolTransportationFee+primarySchoolLunchFee;
-}
-double secondarySchoolTotalMonthlyFee(double secondarySchoolTutuionFee, double secondarySchoolTransportationFee, double secondarySchoolLunchFee)
-{
-    return secondarySchoolTutuionFee+secondarySchoolTransportationFee+secondarySchoolLunchFee;
-}
-double highSchoolTotalMonthlyFee(double highSchoolTutuionFee, double highSchoolTransportationFee, double highSchoolLunchFee)
-{
-    return highSchoolTutuionFee+highSchoolTransportationFee+highSchoolLunchFee;
+    return SchoolTutuionFee+SchoolTransportationFee+SchoolLunchFee;
 }
