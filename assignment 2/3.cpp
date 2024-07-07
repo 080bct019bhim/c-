@@ -6,12 +6,11 @@ double& great(double& x, double& y)
 }
 int main()
 {
-    double num1,num2,temp;
+    double num1,num2;
     cout<<"Enter two numbers:\n";
     cin>>num1>>num2;
-    temp=great(num1,num2);
-    cout<<"Greatest value "<<temp<<" is updated to : "; 
-    temp=500;
-    cout<<temp;
+    great(num1,num2)=500;
+    cout<<endl<<num1<<endl<<num2;
+    
     return 0;
 }
