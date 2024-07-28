@@ -37,7 +37,7 @@ class matrices{
                 {
                     for(int k=0;  k<3; k++)
                     {
-                        temp.arr[i][j]=temp.arr[i][j]+arr[i][k]*arr[k][j];
+                        temp.arr[i][j]+=arr[i][k]*m.arr[k][j];
                     }
                 }
             }
@@ -49,7 +49,7 @@ class matrices{
             for(int i=0; i<3; i++)
             {
                 for(int j=0;  j<3; j++)
-                    cout<<arr[i][j];
+                    cout<<arr[i][j]<<"\t";
                 cout<<endl;
             }
         }
